@@ -6,10 +6,10 @@
         { elem: 'meta', attrs: { name: 'keywords', content: '' } },
         { elem: 'meta', attrs: { name: 'description', content: '' } }
     ],
-    css: [
+    styles: [
         { elem: 'css', url: '_app.css' }
     ],
-    js: [
+    scripts: [
         { elem: 'js', url: 'http://yandex.st/jquery/1.8.0/jquery.min.js' },
         { elem: 'js', url: '_app.js' }
     ],
