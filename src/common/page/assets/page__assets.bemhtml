@@ -9,8 +9,8 @@ block page {
         tag: ''
 
         elemMod position top, content: [
-            this.ctx.css,
-            this.ctx.js
+            this.ctx.styles,
+            this.ctx.scripts
         ]
 
     }
