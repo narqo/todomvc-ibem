@@ -1,15 +1,19 @@
 block page {
 
-//    elem assets {
-//
-//        tag: ''
-//        content: [
-//            this.ctx.css,
-//            this.ctx.js
-//        ]
-//
-//        elemMod posistion bottom, content: ''
-//    }
+    elem assets {
+
+        default: {
+            applyNext(this._assetPosition = (this.ctx.elemMods || {})['position']);
+        }
+
+        tag: ''
+
+        elemMod position top, content: [
+            this.ctx.css,
+            this.ctx.js
+        ]
+
+    }
 
     elem css {
 

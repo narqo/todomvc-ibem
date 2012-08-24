@@ -7,7 +7,6 @@ block page {
     default: {
         var ctx = this.ctx,
             doctype = apply('doctype'),
-            assets = ctx.assets || {},
 
             buf = [
                 doctype,
@@ -25,10 +24,14 @@ block page {
                                     elem: 'title',
                                     content: ctx.title
                                 },
-                                (ctx.meta || ''),
+                                ctx.meta,
                                 (ctx.hasOwnProperty('favicon') ? { elem: 'favicon', url: ctx.favicon } : ''),
-                                assets.css,
-                                assets.js
+                                {
+                                    elem: 'assets',
+                                    elemMods: { position: 'top' },
+                                    css: ctx.css,
+                                    js: ctx.js
+                                }
                             ]
                         },
                         ctx
@@ -38,6 +41,16 @@ block page {
 
         applyCtx(buf);
     }
+
+    content: [
+        this.ctx.content,
+        {
+            elem: 'assets',
+            elemMods: { position: 'bottom' },
+            css: this.ctx.css,
+            js: this.ctx.js
+        }
+    ]
 
     elem root, tag: 'html'
 
