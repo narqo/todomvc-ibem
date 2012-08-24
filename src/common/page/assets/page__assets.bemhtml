@@ -1,0 +1,38 @@
+block page {
+
+//    elem assets {
+//
+//        tag: ''
+//        content: [
+//            this.ctx.css,
+//            this.ctx.js
+//        ]
+//
+//        elemMod posistion bottom, content: ''
+//    }
+
+    elem css {
+
+        bem: false
+
+        tag: 'style'
+
+        this.ctx.url {
+
+            tag: 'link'
+            attrs: { rel: 'stylesheet', href: this.ctx.url }
+
+        }
+    }
+
+    elem js {
+
+        bem: false
+
+        tag: 'script'
+
+        this.ctx.url, attrs: { src: this.ctx.url }
+
+    }
+
+}
