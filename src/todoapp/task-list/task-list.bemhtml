@@ -1,0 +1,47 @@
+block task-list {
+
+    default: {
+        applyNext(
+            this._tasksList = this.block,
+            this._mode = '',
+            this.ctx = [
+                {
+                    elem: 'switcher'
+                },
+                {
+                    elem: 'switcher-label',
+                    content: this.ctx.switcher
+                },
+                this.ctx
+            ]
+        );
+    }
+
+    tag: 'ul'
+
+    elem switcher {
+
+        tag: 'input'
+
+        attrs: { type: 'checkbox', id: 'check-all' }
+
+    }
+
+    elem switcher-label {
+
+        tag: 'label'
+
+        atts: { 'for': 'check-all' }
+
+    }
+
+}
+
+
+block task, this._tasksList {
+
+    tag: 'li'
+
+    mix: [{ block: this._tasksList, elem: 'item' }]
+
+}

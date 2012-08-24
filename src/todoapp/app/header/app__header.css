@@ -1,0 +1,30 @@
+.app__header
+{
+    border-radius: inherit;
+}
+
+.app__header:before
+{
+    content: '';
+
+    background: #8d7d77;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(132, 110, 100, 0.8)),to(rgba(101, 84, 76, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: -moz-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: -o-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: -ms-linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+    background: linear-gradient(top, rgba(132, 110, 100, 0.8), rgba(101, 84, 76, 0.8));
+
+    border-bottom: 1px solid #6c615c;
+
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+
+    position: absolute;
+    top: -15px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    height: 15px;
+}

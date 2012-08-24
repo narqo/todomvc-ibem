@@ -1,0 +1,14 @@
+block header {
+
+    tag: 'header'
+
+    content: {
+        elem: 'content',
+        content: this.ctx.content
+    }
+
+    elem content {
+        tag: 'h1'
+    }
+
+}

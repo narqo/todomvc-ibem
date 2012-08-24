@@ -1,0 +1,37 @@
+block task {
+
+    js: true
+
+    content: [
+        {
+            elem: 'view',
+            content: [
+                { elem: 'switcher' },
+                { elem: 'label', content: this.ctx.content },
+                { elem: 'destroy' }
+            ]
+        },
+        {
+            elem: 'edit',
+            content: this.ctx.content
+        }
+    ]
+
+    elem switcher {
+
+        tag: 'input'
+
+        attrs: {
+            type: 'checkbox',
+            checked: this.mods.completed ? true : undefined
+        }
+
+    }
+
+    elem label, tag: 'label'
+
+    elem destroy, tag: 'button'
+
+    elem edit, tag: 'input'
+
+}

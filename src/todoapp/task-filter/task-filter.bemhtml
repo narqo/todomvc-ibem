@@ -1,0 +1,24 @@
+block task-filter {
+
+    tag: 'ul'
+
+    elem 'item-wrap', tag: 'li'
+
+    elem 'item' {
+
+        default: {
+            applyCtx({
+                elem: 'item-wrap',
+                content: this.ctx
+            });
+        }
+
+        tag: 'a'
+
+        attrs: {
+            href: this.ctx.url
+        }
+
+    }
+
+}

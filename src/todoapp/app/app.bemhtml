@@ -1,0 +1,7 @@
+block app {
+
+    tag: 'section'
+
+    elem footer, tag: 'footer'
+
+}

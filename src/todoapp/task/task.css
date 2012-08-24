@@ -1,0 +1,4 @@
+.task:hover .task__destroy
+{
+    display: block;
+}

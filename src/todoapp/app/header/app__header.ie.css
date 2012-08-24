@@ -1,0 +1,4 @@
+.app__header:before
+{
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+}

@@ -1,0 +1,12 @@
+block 'task-new' {
+
+    tag: 'input'
+
+    attrs: { placeholder: this.ctx.hint, autofocus: true }
+
+    mix: [
+        { block: 'task', elem: 'edit' },
+        { block: 'app', elem: 'header' }
+    ]
+
+}

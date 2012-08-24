@@ -1,0 +1,44 @@
+.task-list__switcher
+{
+    background: none;
+
+    border: 0;
+
+    position: absolute;
+    top: 12px;
+    left: -15px;
+    z-index: 2;
+
+    width: 65px;
+    height: 41px;
+
+    text-align: center;
+
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.task-list__switcher:before
+{
+    content: '»';
+
+    color: #d9d9d9;
+    font-size: 28px;
+
+    padding: 0 25px 7px;
+}
+
+.task-list__switcher:checked:before
+{
+    color: #737373;
+}
+
+.task-list__switcher-label
+{
+    display: none;
+}

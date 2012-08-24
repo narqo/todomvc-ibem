@@ -1,0 +1,20 @@
+block task-list {
+
+    elem counter {
+
+        tag: 'span'
+
+        content: [
+            {
+                elem: 'counter-text',
+                content: this.ctx.count
+            },
+            ' ',
+            this.ctx.content
+        ]
+
+    }
+
+    elem counter-text, tag: 'strong'
+
+}
