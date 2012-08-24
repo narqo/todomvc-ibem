@@ -7,7 +7,6 @@ block page {
     default: {
         var ctx = this.ctx,
             doctype = apply('doctype'),
-            assets = ctx.assets || {},
 
             buf = [
                 doctype,
@@ -30,8 +29,8 @@ block page {
                                 {
                                     elem: 'assets',
                                     elemMods: { position: 'top' },
-                                    css: assets.css,
-                                    js: assets.js
+                                    css: ctx.css,
+                                    js: ctx.js
                                 }
                             ]
                         },
@@ -43,18 +42,15 @@ block page {
         applyCtx(buf);
     }
 
-    content: {
-        var assets = this.ctx.assets || {};
-        return [
-            this.ctx.content,
-            {
-                elem: 'assets',
-                elemMods: { position: 'bottom' },
-                css: assets.css,
-                js: assets.js
-            }
-        ];
-    }
+    content: [
+        this.ctx.content,
+        {
+            elem: 'assets',
+            elemMods: { position: 'bottom' },
+            css: this.ctx.css,
+            js: this.ctx.js
+        }
+    ]
 
     elem root, tag: 'html'
 

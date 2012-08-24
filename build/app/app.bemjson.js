@@ -4,17 +4,15 @@
     title: 'i-bem.js • TodoMVC App',
     meta: [
         { elem: 'meta', attrs: { name: 'keywords', content: '' } },
-        { elem: 'meta', attrs: { name: 'description', content: '' } },
+        { elem: 'meta', attrs: { name: 'description', content: '' } }
     ],
-    assets: {
-        css: [
-            { elem: 'css', url: '_app.css' }
-        ],
-        js: [
-            { elem: 'js', url: 'http://yandex.st/jquery/1.8.0/jquery.min.js' },
-            { elem: 'js', url: '_app.js' }
-        ]
-    },
+    css: [
+        { elem: 'css', url: '_app.css' }
+    ],
+    js: [
+        { elem: 'js', url: 'http://yandex.st/jquery/1.8.0/jquery.min.js' },
+        { elem: 'js', url: '_app.js' }
+    ],
     content: [
         {
             block: 'header',
