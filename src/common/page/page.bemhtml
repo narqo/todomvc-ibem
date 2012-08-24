@@ -7,7 +7,6 @@ block page {
     default: {
         var ctx = this.ctx,
             doctype = apply('doctype'),
-
             buf = [
                 doctype,
                 {
@@ -29,8 +28,8 @@ block page {
                                 {
                                     elem: 'assets',
                                     elemMods: { position: 'top' },
-                                    css: ctx.css,
-                                    js: ctx.js
+                                    styles: ctx.styles,
+                                    scripts: ctx.scripts
                                 }
                             ]
                         },
@@ -47,8 +46,8 @@ block page {
         {
             elem: 'assets',
             elemMods: { position: 'bottom' },
-            css: this.ctx.css,
-            js: this.ctx.js
+            styles: this.ctx.styles,
+            scripts: this.ctx.scripts
         }
     ]
 

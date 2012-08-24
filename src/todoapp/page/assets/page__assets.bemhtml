@@ -1,0 +1,11 @@
+block page, elem assets {
+
+    content {
+
+        elemMod position top: this.ctx.styles
+
+        elemMod position bottom: this.ctx.scripts
+
+    }
+
+}
