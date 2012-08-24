@@ -28,8 +28,8 @@ exports.getConfig = function() {
 
         bundleBuildLevels: this.resolvePaths([
                 '../../bem-bl/blocks-common',
-                '../../common',
-                '../../todoapp',
+                '../../src/common',
+                '../../src/todoapp',
             ].map(function(path) {
                 return PATH.resolve(__dirname, path);
             }))
