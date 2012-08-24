@@ -1,0 +1,9 @@
+.project
+
+node_modules/
+bem-bl/
+
+build/*/*
+!build/*/*.bemjson.js
+
+!level.js
